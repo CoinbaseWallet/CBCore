@@ -11,15 +11,6 @@ android {
     defaultConfig {
         minSdkVersion 23
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-    }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
     }
 }
 
@@ -40,8 +31,10 @@ dependencies {
             "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}",
             "io.reactivex.rxjava2:rxkotlin:${versions.rxKotlin}",
 
+            "com.squareup.moshi:moshi-kotlin:${versions.moshi}",
+
             // Logging
-            "com.jakewharton.timber:timber:${versions.timber}"
+            "com.jakewharton.timber:timber:${versions.timber}",
     )
 
     testImplementation(
