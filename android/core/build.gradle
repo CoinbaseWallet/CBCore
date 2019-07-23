@@ -1,3 +1,4 @@
+apply from: '../gradle/dependencies.gradle'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
@@ -28,19 +29,19 @@ configurations {
 
 dependencies {
 
-    ktlint "com.pinterest:ktlint:${otherVersions.ktlintVersion}"
+    ktlint "com.pinterest:ktlint:${otherVersions.ktlint}"
 
     implementation(
             // kotlin
-            "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlinVersion}",
+            "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin}",
 
             // ReactiveX 2
-            "io.reactivex.rxjava2:rxjava:${versions.rxJavaVersion}",
-            "io.reactivex.rxjava2:rxandroid:${versions.rxAndroidVersion}",
-            "io.reactivex.rxjava2:rxkotlin:${versions.rxKotlinVersion}",
+            "io.reactivex.rxjava2:rxjava:${versions.rxJava}",
+            "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}",
+            "io.reactivex.rxjava2:rxkotlin:${versions.rxKotlin}",
 
             // Logging
-            "com.jakewharton.timber:timber:${versions.timberVersion}"
+            "com.jakewharton.timber:timber:${versions.timber}"
     )
 
     testImplementation(
