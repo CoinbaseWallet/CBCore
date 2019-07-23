@@ -15,3 +15,12 @@ data class Optional<out T : Any>(val value: T?) {
      */
     fun toNullable(): T? = value
 }
+
+/**
+ * Convert a value to an optional
+ *
+ * @param T The type of the nullable value
+ *
+ * @return The value to become optional
+ */
+fun <T : Any> T?.toOptional(): Optional<T> = Optional(this)

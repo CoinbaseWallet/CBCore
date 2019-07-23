@@ -39,9 +39,6 @@ dependencies {
             "io.reactivex.rxjava2:rxandroid:${versions.rxAndroidVersion}",
             "io.reactivex.rxjava2:rxkotlin:${versions.rxKotlinVersion}",
 
-            // optional
-            "com.gojuno.koptional:koptional:${versions.koptionalVersion}",
-
             // Logging
             "com.jakewharton.timber:timber:${versions.timberVersion}"
     )
@@ -51,7 +48,7 @@ dependencies {
     )
 
     androidTestImplementation(
-            "androidx.test.ext:junit:${testVersions.androidXTestExtJunit}",
+            "androidx.test.ext:junit:${testVersions.androidXTestExtJUnit}",
             "androidx.test:runner:${testVersions.androidXTestRunner}",
             "androidx.test:core:${testVersions.androidXTestCore}"
     )

@@ -1,6 +1,6 @@
 package com.coinbase.wallet.core.extensions
 
-import com.gojuno.koptional.Optional
+import com.coinbase.wallet.core.util.Optional
 import io.reactivex.Observable
 import io.reactivex.Single
 import timber.log.Timber
