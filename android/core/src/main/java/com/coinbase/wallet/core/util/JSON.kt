@@ -2,6 +2,7 @@ package com.coinbase.wallet.core.util
 
 import com.coinbase.wallet.core.jsonadapters.BigDecimalAdapter
 import com.coinbase.wallet.core.jsonadapters.BigIntegerAdapter
+import com.coinbase.wallet.core.jsonadapters.UIntAdapter
 import com.coinbase.wallet.core.jsonadapters.UrlAdapter
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
@@ -59,12 +60,14 @@ object JSON {
 
     // Helpers
 
+    @ExperimentalUnsignedTypes
     private fun buildMoshi(): Moshi {
         val builder = Moshi.Builder()
             .add(KotlinJsonAdapterFactory())
             .add(URL::class.java, UrlAdapter())
             .add(BigDecimal::class.java, BigDecimalAdapter())
             .add(BigInteger::class.java, BigIntegerAdapter())
+            .add(UInt::class.java, UIntAdapter())
 
         entries.forEach { builder.add(it.key, it.value) }
 
