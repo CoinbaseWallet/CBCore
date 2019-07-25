@@ -24,7 +24,7 @@ fun <T> Observable<T>.takeSingle(): Single<T> {
  *
  * @return The raw value [T] that has been unwrapped from [Optional]
  */
-inline fun <reified T: Any> Observable<Optional<T>>.unwrap(): Observable<T> = this
+inline fun <reified T : Any> Observable<Optional<T>>.unwrap(): Observable<T> = this
         .filter { it.toNullable() != null }
         .map { it.toNullable() }
 
@@ -36,4 +36,3 @@ inline fun <reified T: Any> Observable<Optional<T>>.unwrap(): Observable<T> = th
  */
 fun <T> Observable<T>.logError(): Observable<T> =
         doOnError { Timber.e("wallets: error ${it.localizedMessage}") }
-
