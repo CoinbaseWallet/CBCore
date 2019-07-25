@@ -32,5 +32,3 @@ fun <T> Single<T>.asUnit(): Single<Unit> {
 fun <T> Single<T>.retryWithDelay(maxAttempts: Long, delay: Long, timeUnit: TimeUnit): Single<T> {
     return this.retryWhen { it.take(maxAttempts).delay(delay, timeUnit) }
 }
-
-

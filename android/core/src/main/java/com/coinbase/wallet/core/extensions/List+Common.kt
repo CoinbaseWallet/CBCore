@@ -12,8 +12,8 @@ import io.reactivex.rxkotlin.Singles
  * @return final map
  */
 inline fun <reified K, reified V, reified E> List<E>.reduceIntoMap(
-        map: MutableMap<K, V> = mutableMapOf(),
-        closure: (MutableMap<K, V>, E) -> Unit
+    map: MutableMap<K, V> = mutableMapOf(),
+    closure: (MutableMap<K, V>, E) -> Unit
 ): Map<K, V> {
     forEach { closure(map, it) }
 
