@@ -7,9 +7,4 @@ package com.coinbase.wallet.core.extensions
  *
  * @return the non-null value of type V
  */
-fun <K, V> Map<K, V>.require(key: K): V {
-    if (!containsKey(key)) {
-        throw NoSuchElementException("$key does not exist in map")
-    }
-    return get(key) ?: throw NoSuchElementException("$key in map is null.")
-}
+fun <K, V> Map<K, V>.require(key: K): V = get(key) ?: throw NoSuchElementException("$key in map is missing.")
