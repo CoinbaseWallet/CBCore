@@ -7,7 +7,7 @@ import java.net.URL
  */
 val String.isHexString: Boolean
     get() = try {
-        Regex("^[a-f0-9]*$", RegexOption.IGNORE_CASE).matches(this)
+        Regex("^(0x|0X)[a-f0-9]*$", RegexOption.IGNORE_CASE).matches(this)
     } catch (e: Exception) {
         false
     }

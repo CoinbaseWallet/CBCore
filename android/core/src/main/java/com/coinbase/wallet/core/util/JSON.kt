@@ -20,6 +20,7 @@ object JSON {
     /**
      * Moshi singleton instance
      */
+    @ExperimentalUnsignedTypes
     var moshi: Moshi = buildMoshi()
         private set
 
@@ -30,6 +31,7 @@ object JSON {
      *
      * @return An instance of T or null if invalid JSON string
      */
+    @ExperimentalUnsignedTypes
     inline fun <reified T> fromJsonString(jsonString: String): T? {
         val adapter = moshi.adapter<T>(T::class.java)
         return adapter.fromJson(jsonString)
@@ -42,6 +44,7 @@ object JSON {
      *
      * @return A json string based on T instance
      */
+    @ExperimentalUnsignedTypes
     inline fun <reified T> toJsonString(instance: T): String {
         val adapter = moshi.adapter<T>(T::class.java)
         return adapter.toJson(instance)
@@ -53,6 +56,7 @@ object JSON {
      * @param clazz Class type to convert to/from JSON
      * @param adapter Adapter used to convert the JSON
      */
+    @ExperimentalUnsignedTypes
     fun <T> add(clazz: Class<T>, adapter: JsonAdapter<T>) {
         entries[clazz] = adapter
         moshi = buildMoshi()
