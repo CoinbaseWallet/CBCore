@@ -1,0 +1,16 @@
+platform :ios, '11.0'
+
+target 'CBCore' do
+  use_frameworks!
+
+  pod 'RxSwift', '~> 4.4.0'
+  pod 'SwiftLint'
+  pod 'SwiftFormat/CLI', '0.37.2'
+  pod 'BigInt',  '~> 3.1.0'
+
+  target 'CBCoreTests' do
+    inherit! :search_paths
+    pod 'RxBlocking', '~> 4.3.1'
+  end
+
+end

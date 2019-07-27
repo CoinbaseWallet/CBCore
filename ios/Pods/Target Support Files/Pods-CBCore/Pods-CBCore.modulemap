@@ -1,0 +1,6 @@
+framework module Pods_CBCore {
+  umbrella header "Pods-CBCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
