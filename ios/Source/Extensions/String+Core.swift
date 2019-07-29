@@ -222,7 +222,7 @@ extension Optional where Wrapped == String {
     public var asBigInt: BigInt? {
         guard let value = self else { return nil }
 
-        return BigInt(value)
+        return value.asBigInt
     }
 
     /// Convert optional string to URL if possible
