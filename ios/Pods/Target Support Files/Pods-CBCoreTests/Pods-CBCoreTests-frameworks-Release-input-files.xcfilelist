@@ -1,4 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-CBCoreTests/Pods-CBCoreTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework
 ${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework
 ${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework

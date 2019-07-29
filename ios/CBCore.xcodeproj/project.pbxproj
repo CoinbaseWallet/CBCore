@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		24F0E407D1522F556727305B /* Pods_CBCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48766EC05FAB2D444FDAA4A7 /* Pods_CBCore.framework */; };
 		CE6B2C878CAAE37CB3B1D358 /* Pods_CBCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C699667E9E63F58BEF278F72 /* Pods_CBCoreTests.framework */; };
+		E76C14CA22EF6F2800E46589 /* BoundedCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C722EF6F2800E46589 /* BoundedCacheTests.swift */; };
+		E76C14CB22EF6F2800E46589 /* BoundedSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */; };
+		E76C14CC22EF6F2800E46589 /* AtomicInt32Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */; };
 		E7752DE322ED015800D98E98 /* CBCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7752DD922ED015700D98E98 /* CBCore.framework */; };
-		E7752DE822ED015800D98E98 /* CBCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752DE722ED015800D98E98 /* CBCoreTests.swift */; };
 		E7752DEA22ED015800D98E98 /* CBCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E7752DDC22ED015700D98E98 /* CBCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7752DF922ED04B400D98E98 /* BoundedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752DF622ED04B400D98E98 /* BoundedCache.swift */; };
 		E7752DFA22ED04B400D98E98 /* BoundedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752DF722ED04B400D98E98 /* BoundedSet.swift */; };
@@ -58,11 +60,13 @@
 		C2D1E42FE3E279C9FFA4A53C /* Pods-CBCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBCore.debug.xcconfig"; path = "Target Support Files/Pods-CBCore/Pods-CBCore.debug.xcconfig"; sourceTree = "<group>"; };
 		C699667E9E63F58BEF278F72 /* Pods_CBCoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CBCoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5176A96504EBB3B4AA9CD75 /* Pods-CBCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-CBCoreTests/Pods-CBCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E76C14C722EF6F2800E46589 /* BoundedCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundedCacheTests.swift; sourceTree = "<group>"; };
+		E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundedSetTests.swift; sourceTree = "<group>"; };
+		E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicInt32Tests.swift; sourceTree = "<group>"; };
 		E7752DD922ED015700D98E98 /* CBCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7752DDC22ED015700D98E98 /* CBCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCore.h; sourceTree = "<group>"; };
 		E7752DDD22ED015700D98E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7752DE222ED015800D98E98 /* CBCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7752DE722ED015800D98E98 /* CBCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBCoreTests.swift; sourceTree = "<group>"; };
 		E7752DE922ED015800D98E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7752DF622ED04B400D98E98 /* BoundedCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundedCache.swift; sourceTree = "<group>"; };
 		E7752DF722ED04B400D98E98 /* BoundedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundedSet.swift; sourceTree = "<group>"; };
@@ -170,7 +174,9 @@
 		E7752DE622ED015800D98E98 /* CBCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				E7752DE722ED015800D98E98 /* CBCoreTests.swift */,
+				E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */,
+				E76C14C722EF6F2800E46589 /* BoundedCacheTests.swift */,
+				E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */,
 				E7752DE922ED015800D98E98 /* Info.plist */,
 			);
 			path = CBCoreTests;
@@ -457,7 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7752DE822ED015800D98E98 /* CBCoreTests.swift in Sources */,
+				E76C14CA22EF6F2800E46589 /* BoundedCacheTests.swift in Sources */,
+				E76C14CC22EF6F2800E46589 /* AtomicInt32Tests.swift in Sources */,
+				E76C14CB22EF6F2800E46589 /* BoundedSetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +662,8 @@
 			baseConfigurationReference = E5176A96504EBB3B4AA9CD75 /* Pods-CBCoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CBCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -663,6 +672,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coinbase.wallet.core.CBCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -673,7 +683,8 @@
 			baseConfigurationReference = 9BA62533429E43A054DA90E2 /* Pods-CBCoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CBCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -682,6 +693,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coinbase.wallet.core.CBCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

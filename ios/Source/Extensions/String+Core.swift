@@ -23,7 +23,7 @@ extension String {
 
     /// Convert string to BigInt if possible
     public var asBigInt: BigInt? {
-        return BigInt(string: self)
+        return BigInt.fromScientificNotation(string: self)
     }
 
     /// Convert string to hex representation

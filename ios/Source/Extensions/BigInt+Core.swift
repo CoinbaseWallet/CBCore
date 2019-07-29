@@ -18,10 +18,9 @@ extension BigInt {
     ///     - string: Numeric string used to create an instance of BigInt
     ///
     /// - Returns: A new instance of `BigInt` representing the string or nil if unable to parse string
-    public init?(string: String) {
+    public static func fromScientificNotation(string: String) -> BigInt? {
         if let value = BigInt(string) {
-            self.init(value)
-            return
+            return value
         }
 
         let matches = string.matches(regex: "^([\\-]?)(\\d+)(\\.{0,1}(\\d+))?e{1}(\\d+)$")
@@ -45,6 +44,6 @@ extension BigInt {
         let decimalsToMove = numberOfDecimals - rhsOfDecimal.count
         let bigIntValue = number * BigInt(10).power(decimalsToMove) * (isNegative ? BigInt(-1) : BigInt(1))
 
-        self.init(bigIntValue)
+        return BigInt(bigIntValue)
     }
 }
