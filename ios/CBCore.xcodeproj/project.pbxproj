@@ -12,6 +12,7 @@
 		E76C14CA22EF6F2800E46589 /* BoundedCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C722EF6F2800E46589 /* BoundedCacheTests.swift */; };
 		E76C14CB22EF6F2800E46589 /* BoundedSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */; };
 		E76C14CC22EF6F2800E46589 /* AtomicInt32Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */; };
+		E76C14CE22EF8F0400E46589 /* BigIntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14CD22EF8F0400E46589 /* BigIntExtensionTests.swift */; };
 		E7752DE322ED015800D98E98 /* CBCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7752DD922ED015700D98E98 /* CBCore.framework */; };
 		E7752DEA22ED015800D98E98 /* CBCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E7752DDC22ED015700D98E98 /* CBCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7752DF922ED04B400D98E98 /* BoundedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752DF622ED04B400D98E98 /* BoundedCache.swift */; };
@@ -63,6 +64,7 @@
 		E76C14C722EF6F2800E46589 /* BoundedCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundedCacheTests.swift; sourceTree = "<group>"; };
 		E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundedSetTests.swift; sourceTree = "<group>"; };
 		E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicInt32Tests.swift; sourceTree = "<group>"; };
+		E76C14CD22EF8F0400E46589 /* BigIntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigIntExtensionTests.swift; sourceTree = "<group>"; };
 		E7752DD922ED015700D98E98 /* CBCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7752DDC22ED015700D98E98 /* CBCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCore.h; sourceTree = "<group>"; };
 		E7752DDD22ED015700D98E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		E7752DE622ED015800D98E98 /* CBCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				E76C14CD22EF8F0400E46589 /* BigIntExtensionTests.swift */,
 				E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */,
 				E76C14C722EF6F2800E46589 /* BoundedCacheTests.swift */,
 				E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */,
@@ -465,6 +468,7 @@
 			files = (
 				E76C14CA22EF6F2800E46589 /* BoundedCacheTests.swift in Sources */,
 				E76C14CC22EF6F2800E46589 /* AtomicInt32Tests.swift in Sources */,
+				E76C14CE22EF8F0400E46589 /* BigIntExtensionTests.swift in Sources */,
 				E76C14CB22EF6F2800E46589 /* BoundedSetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

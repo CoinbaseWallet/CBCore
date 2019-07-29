@@ -1,7 +1,7 @@
 // Copyright (c) 2017-2019 Coinbase Inc. See LICENSE
 
-import XCTest
 @testable import CBCore
+import XCTest
 
 class AtomicInt32Tests: XCTestCase {
     func testSingleThreadedIncrements() {

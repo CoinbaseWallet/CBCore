@@ -1,5 +1,5 @@
 format:
-	ios/Pods/SwiftFormat/CommandLineTool/swiftformat ios/Source --exclude Toshi/Generated/Code --header "Copyright (c) 2017-{year} Coinbase Inc. See LICENSE"
+	ios/Pods/SwiftFormat/CommandLineTool/swiftformat ios/Source ios/CBCoreTests --header "Copyright (c) 2017-{year} Coinbase Inc. See LICENSE"
 	android/gradlew ktlintFormat -p android
 
 lint:
