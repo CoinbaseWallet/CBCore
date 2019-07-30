@@ -6,21 +6,6 @@ import os.log
 private let hexadecimalArray: [UInt8] = Array("0123456789abcdef".utf8)
 
 extension Data {
-    /// Generate random `Data` based on given length
-    ///
-    /// - Parameter:
-    ///     - numberOfBytes: Size of random `Data` object to generate
-    ///
-    /// - Returns: Randomized bytes with given size encapsulated in a `Data` object
-    public static func randomBytes(_ numberOfBytes: Int) -> Data? {
-        var randomBytes = [UInt8](repeating: 0, count: numberOfBytes)
-        let status = SecRandomCopyBytes(kSecRandomDefault, randomBytes.count, &randomBytes)
-
-        if status != errSecSuccess { return nil }
-
-        return Data(randomBytes)
-    }
-
     /// Convert to JSON dictionary if possible
     public var jsonDictionary: [String: Any]? {
         return jsonObject as? [String: Any]
@@ -34,6 +19,21 @@ extension Data {
             print("exception: \(error)")
             return nil
         }
+    }
+
+    /// Generate random `Data` based on given length
+    ///
+    /// - Parameter:
+    ///     - numberOfBytes: Size of random `Data` object to generate
+    ///
+    /// - Returns: Randomized bytes with given size encapsulated in a `Data` object
+    public static func randomBytes(_ numberOfBytes: Int) -> Data? {
+        var randomBytes = [UInt8](repeating: 0, count: numberOfBytes)
+        let status = SecRandomCopyBytes(kSecRandomDefault, randomBytes.count, &randomBytes)
+
+        if status != errSecSuccess { return nil }
+
+        return Data(randomBytes)
     }
 
     /// Convert to prefixed hex string

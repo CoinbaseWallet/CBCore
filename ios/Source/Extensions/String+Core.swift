@@ -80,7 +80,7 @@ extension String {
     }
 
     /// Convert to hex Data if possible
-    public var asHexEncodingData: Data? {
+    public var asHexEncodedData: Data? {
         let strippedLowerStr = strip0x().lowercased()
         let str = strippedLowerStr.count % 2 == 0 ? strippedLowerStr : "0" + strippedLowerStr
 

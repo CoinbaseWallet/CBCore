@@ -14,5 +14,4 @@ target 'CBCore' do
     pod 'BigInt', '~> 3.1.0'
     pod 'RxSwift', '~> 4.4.0'
   end
-
 end
