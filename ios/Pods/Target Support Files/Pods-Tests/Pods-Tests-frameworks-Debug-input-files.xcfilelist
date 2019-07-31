@@ -1,4 +1,4 @@
-${PODS_ROOT}/Target Support Files/Pods-CBCoreTests/Pods-CBCoreTests-frameworks.sh
+${PODS_ROOT}/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework
 ${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

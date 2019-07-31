@@ -8,7 +8,7 @@ target 'CBCore' do
   pod 'SwiftFormat/CLI', '0.37.2'
   pod 'BigInt', '~> 3.1.0'
 
-  target 'CBCoreTests' do
+  target 'Tests' do
     inherit! :search_paths
     pod 'RxBlocking', '~> 4.3.1'
     pod 'BigInt', '~> 3.1.0'
