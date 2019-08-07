@@ -27,7 +27,6 @@ val String?.asURL: URL? get() = this?.let { URL(it) }
  */
 val String?.asBigInteger: BigInteger? get() = this?.let { BigInteger(it) }
 
-
 /**
  * Strip out "0x" prefix if one exists. Otherwise, no-op
  */
@@ -71,4 +70,3 @@ fun String.asJsonMap(): Map<String, Any>? {
 
     return adapter.fromJson(this)
 }
-

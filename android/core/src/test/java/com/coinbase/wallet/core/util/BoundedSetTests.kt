@@ -1,12 +1,14 @@
 package com.coinbase.wallet.core.util
 
-import junit.framework.Assert.*
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+import org.junit.Assert.assertFalse
 import org.junit.Test
 
 class BoundedSetTests {
     @Test
     fun testBoundedSetMaxSize() {
-        val set = BoundedSet<String>( 2)
+        val set = BoundedSet<String>(2)
 
         set.add("hish")
         set.add("johnny")
