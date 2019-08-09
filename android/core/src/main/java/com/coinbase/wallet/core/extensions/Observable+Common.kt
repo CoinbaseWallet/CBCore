@@ -36,3 +36,27 @@ inline fun <reified T : Any> Observable<Optional<T>>.unwrap(): Observable<T> = t
  */
 fun <T> Observable<T>.logError(msg: String? = null): Observable<T> =
     doOnError { Timber.e(it, "$msg ${it.localizedMessage}".trim()) }
+
+/**
+ * Retry [Observable] on error if given closure returns true.
+ *
+ * @param maxAttempts Maximum number of times to attempt the sequence subscription.
+ * @param shouldRetry Closure called to determine whether to continue retrying
+ *
+ * @return Next sequence in the stream or error is thrown once maxAttempts is reached or closure returns false.
+ */
+fun <T> Observable<T>.retryIfNeeded(maxAttempts: Int, shouldRetry: (Throwable) -> Boolean): Observable<T> = this
+    .retryWhen { errors ->
+        var count = 0
+
+        errors
+            .map { Pair(count, it) }
+            .map { (attempt, error) ->
+                count++
+                if (maxAttempts == attempt + 1 || !shouldRetry(error)) {
+                    throw error
+                }
+
+                Unit
+            }
+    }
