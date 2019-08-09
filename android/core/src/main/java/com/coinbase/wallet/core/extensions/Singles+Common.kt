@@ -1,5 +1,6 @@
 package com.coinbase.wallet.core.extensions
 
+import com.coinbase.wallet.core.util.Optional
 import io.reactivex.Single
 import io.reactivex.rxkotlin.Singles
 
@@ -17,3 +18,8 @@ inline fun <reified T> Singles.zipOrEmpty(singles: List<Single<T>>): Single<List
 
     return Single.zip(singles) { if (it.isEmpty()) emptyList() else it.filterIsInstance<T>() }
 }
+
+/**
+ * Helper function to return a null optional
+ */
+inline fun <reified T : Any> Singles.justNull(): Single<Optional<T>> = Single.just(Optional(null))
