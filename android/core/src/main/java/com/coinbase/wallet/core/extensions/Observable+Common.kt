@@ -34,5 +34,5 @@ inline fun <reified T : Any> Observable<Optional<T>>.unwrap(): Observable<T> = t
  *
  * @return The original observable if no error happens
  */
-fun <T> Observable<T>.logError(): Observable<T> =
-    doOnError { Timber.e("wallets: error ${it.localizedMessage}") }
+fun <T> Observable<T>.logError(msg: String? = null): Observable<T> =
+    doOnError { Timber.e(it, "$msg ${it.localizedMessage}".trim()) }

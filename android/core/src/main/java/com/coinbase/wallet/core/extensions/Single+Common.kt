@@ -9,7 +9,8 @@ import java.util.concurrent.TimeUnit
  */
 // FIXME: hish - log to analytics?
 
-fun <T> Single<T>.logError(): Single<T> = doOnError { Timber.e("walletapp: error ${it.localizedMessage}") }
+fun <T> Single<T>.logError(msg: String? = null): Single<T> =
+    doOnError { Timber.e(it, "$msg ${it.localizedMessage}".trim()) }
 
 /**
  * Converts any Single<T> to a Single<Unit>
