@@ -24,6 +24,4 @@ class ByteArrayTests {
 
         Assert.assertNull(result.asHexEncodedData()?.asUTF8String)
     }
-
-
 }
