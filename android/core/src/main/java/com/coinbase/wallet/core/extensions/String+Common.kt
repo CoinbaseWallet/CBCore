@@ -20,7 +20,7 @@ val String.isHexString: Boolean
 /**
  * Convert optional string to URL if possible
  */
-val String?.asURL: URL? get() = this?.let { URL(it) }
+val String.asURL: URL? get() = try { URL(this) } catch (e: Throwable) { null }
 
 /**
  * Helper function to convert optional string to a big integer
