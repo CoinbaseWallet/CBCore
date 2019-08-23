@@ -52,7 +52,7 @@ val ByteArray.asUTF8String: String? get() {
 
 private fun isCharSupported(char: Int): Boolean {
     return when (char) {
-        9, 10, 13, //Tab, line feed, carriage return
+        9, 10, 13, // Tab, line feed, carriage return
         in 32..160,
         in 161..399,
         in 417..431,
