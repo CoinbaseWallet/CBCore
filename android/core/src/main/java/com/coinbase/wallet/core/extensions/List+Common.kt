@@ -1,6 +1,8 @@
 package com.coinbase.wallet.core.extensions
 
+import io.reactivex.Observable
 import io.reactivex.Single
+import io.reactivex.rxkotlin.Observables
 import io.reactivex.rxkotlin.Singles
 
 /**
@@ -21,3 +23,6 @@ inline fun <reified K, reified V, reified E> List<E>.reduceIntoMap(
 }
 
 inline fun <reified T> List<Single<T>>.zipOrEmpty(): Single<List<T>> = Singles.zipOrEmpty(this)
+
+inline fun <reified T> List<Observable<T>>.combineLatestOrEmpty(): Observable<List<T>> =
+    Observables.combineLatestOrEmpty(this)
