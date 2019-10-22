@@ -60,3 +60,10 @@ fun <T> Observable<T>.retryIfNeeded(maxAttempts: Int, shouldRetry: (Throwable) -
                 Unit
             }
     }
+
+/**
+ * Converts any Observable<T> to a Observable<Unit>
+ */
+fun <T> Observable<T>.asUnit(): Observable<Unit> {
+    return this.map { Unit }
+}
