@@ -181,13 +181,13 @@ extension String {
                     }
 
                     guard
-                        nsRange.location + nsRange.length <= self.count,
-                        let matchedSubstring = substring(nsRange: nsRange)
+                        let range = Range(nsRange, in: self),
+                        range.clamped(to: startIndex..<endIndex) == range
                     else {
                         continue
                     }
 
-                    results.append(String(matchedSubstring))
+                    results.append(String(self[range]))
                 }
 
                 return results
@@ -198,18 +198,6 @@ extension String {
     /// to `ReversedCollection<String>`
     public func reversedString() -> String {
         return String(reversed())
-    }
-
-    /// Substring using NSRange
-    ///
-    /// - Parameters:
-    ///     - nsRange: NSRange used in the substring operation
-    ///
-    /// - Returns: The result Substring
-    public func substring(nsRange: NSRange) -> Substring? {
-        guard let range = nsRange.range(on: self as NSString) else { return nil }
-
-        return self[range]
     }
 
     public func firstMatch(pattern: String) -> NSTextCheckingResult? {
