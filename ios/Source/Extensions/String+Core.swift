@@ -163,6 +163,7 @@ extension String {
     /// - Returns: A list of matches
     public func matches(regex pattern: String) -> [String?] {
         guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return [] }
+        let nsString = NSString(string: self)
 
         return regex.matches(in: self, options: [], range: NSRange(location: 0, length: count))
             .flatMap { match -> [String?] in
@@ -187,7 +188,7 @@ extension String {
                         continue
                     }
 
-                    results.append(String(self[range]))
+                    results.append(nsString.substring(with: nsRange))
                 }
 
                 return results
