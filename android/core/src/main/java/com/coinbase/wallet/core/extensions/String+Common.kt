@@ -70,3 +70,27 @@ fun String.asJsonMap(): Map<String, Any>? {
 
     return adapter.fromJson(this)
 }
+
+/**
+ * Truncates the middle of a string if necessary. Removes leading and trailing whitespace.
+ * If the truncated string would be longer than the original string, the original String is returned.
+ */
+fun String.truncateMiddle(
+    charactersAtFront: Int,
+    charactersAtEnd: Int,
+    truncationString: String = "…"
+): String {
+
+    val trimmed = this.trim()
+
+    if (trimmed.length <= charactersAtFront + charactersAtEnd + truncationString.length) {
+        return this
+    }
+
+    val startOfEnd = trimmed.lastIndex - charactersAtEnd + 1
+
+    val firstChars = trimmed.substring(0, charactersAtFront)
+    val lastChars = trimmed.substring(startOfEnd)
+
+    return firstChars + truncationString + lastChars
+}
