@@ -1,10 +1,4 @@
-//
-//  StringExtensionTests.swift
-//  Tests
-//
-//  Created by Andrew Gold on 10/25/19.
-//  Copyright © 2019 Coinbase Inc. All rights reserved.
-//
+// Copyright (c) 2017-2019 Coinbase Inc. See LICENSE
 
 import XCTest
 
@@ -31,4 +25,3 @@ class StringExtensionTests: XCTestCase {
         XCTAssertTrue(matches.isEmpty)
     }
 }
-

@@ -1,16 +1,7 @@
 package com.coinbase.wallet.core.extensions
 
 import io.reactivex.Single
-import timber.log.Timber
 import java.util.concurrent.TimeUnit
-
-/**
- * Log any caught exception triggered inside an `Single`
- */
-// FIXME: hish - log to analytics?
-
-fun <T> Single<T>.logError(msg: String? = null): Single<T> =
-    doOnError { Timber.e(it, "$msg ${it.localizedMessage}".trim()) }
 
 /**
  * Converts any Single<T> to a Single<Unit>

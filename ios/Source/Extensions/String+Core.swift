@@ -183,7 +183,7 @@ extension String {
 
                     guard
                         let range = Range(nsRange, in: self),
-                        range.clamped(to: startIndex..<endIndex) == range
+                        range.clamped(to: startIndex ..< endIndex) == range
                     else {
                         continue
                     }

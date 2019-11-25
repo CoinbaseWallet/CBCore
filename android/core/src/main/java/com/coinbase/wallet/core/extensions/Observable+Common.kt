@@ -3,7 +3,6 @@ package com.coinbase.wallet.core.extensions
 import com.coinbase.wallet.core.util.Optional
 import io.reactivex.Observable
 import io.reactivex.Single
-import timber.log.Timber
 
 /**
  * Take the first entry from an observable and return it as a single.
@@ -27,15 +26,6 @@ fun <T> Observable<T>.takeSingle(): Single<T> {
 inline fun <reified T : Any> Observable<Optional<T>>.unwrap(): Observable<T> = this
     .filter { it.toNullable() != null }
     .map { it.toNullable() }
-
-// FIXME: hish - log to analytics?
-/**
- * Log any caught exception triggered inside an [Observable]
- *
- * @return The original observable if no error happens
- */
-fun <T> Observable<T>.logError(msg: String? = null): Observable<T> =
-    doOnError { Timber.e(it, "$msg ${it.localizedMessage}".trim()) }
 
 /**
  * Retry [Observable] on error if given closure returns true.
