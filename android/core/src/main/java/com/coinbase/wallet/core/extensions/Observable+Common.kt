@@ -28,15 +28,6 @@ inline fun <reified T : Any> Observable<Optional<T>>.unwrap(): Observable<T> = t
     .filter { it.toNullable() != null }
     .map { it.toNullable() }
 
-// FIXME: hish - log to analytics?
-/**
- * Log any caught exception triggered inside an [Observable]
- *
- * @return The original observable if no error happens
- */
-fun <T> Observable<T>.logError(msg: String? = null): Observable<T> =
-    doOnError { Timber.e(it, "$msg ${it.localizedMessage}".trim()) }
-
 /**
  * Retry [Observable] on error if given closure returns true.
  *
