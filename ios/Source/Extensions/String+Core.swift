@@ -134,6 +134,11 @@ extension String {
         }
     }
 
+    /// Prefix "0x" to string
+    public func prepend0x() -> String {
+        return starts(with: "0x") ? self : "0x" + self
+    }
+
     /// Strip out "0x" prefix if one exists. Otherwise, no-op
     public func strip0x() -> String {
         return starts(with: "0x") ? String(self[index(startIndex, offsetBy: 2)...]) : self
