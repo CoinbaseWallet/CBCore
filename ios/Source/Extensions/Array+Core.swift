@@ -27,6 +27,11 @@ extension Array {
     public func zip<T>() -> Observable<[T]> where Element == Observable<T> {
         return Observable.zip(self)
     }
+
+    /// Helper to combine latest array of Observables
+    public func combineLatest<T>() -> Observable<[T]> where Element == Observable<T> {
+        return Observable.combineLatest(self)
+    }
 }
 
 extension Array where Element: Hashable {
