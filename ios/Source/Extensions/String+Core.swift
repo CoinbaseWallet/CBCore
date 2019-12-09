@@ -2,6 +2,7 @@
 
 import BigInt
 import os.log
+import Foundation
 
 private let hexadecimalCharacters = "0123456789abcdef"
 
