@@ -12,6 +12,13 @@ extension BigInt {
         self.init(hex.hasPrefix("0x") ? String(hex.dropFirst(2)) : hex, radix: 16)
     }
 
+    /// Optionally returns a BigInt from a given base64 string
+    ///
+    /// - Parameter base64: The base64 string
+    public init?(base64: String) {
+        self.init(base64, radix: 16)
+    }
+
     /// Constructor to convert string to BigInt with added scientific notation parsing support i.e. 3.3e18
     ///
     /// - Parameters:

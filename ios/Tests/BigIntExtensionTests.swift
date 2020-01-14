@@ -119,4 +119,27 @@ class BigIntExtensionTests: XCTestCase {
 
         XCTAssertEqual(BigInt(negativeExpected), negativeBigInt)
     }
+
+    func testBase64String() {
+        let expected = BigInt(10)
+        guard let bigInt = BigInt("000000000000000000000000000000000000000000000000000000000000000a", radix: 16) else {
+            return XCTFail("Unable to parse BigInt")
+        }
+
+        XCTAssertEqual(expected, bigInt)
+
+        guard let bigInt2 = BigInt("a", radix: 16) else {
+            return XCTFail("Unable to parse BigInt")
+        }
+
+        XCTAssertEqual(expected, bigInt2)
+    }
+
+    func testInvalidBase64String() {
+        guard let _ = BigInt("g", radix: 16) else {
+            return
+        }
+
+        XCTFail("Unable to parse BigInt")
+    }
 }
