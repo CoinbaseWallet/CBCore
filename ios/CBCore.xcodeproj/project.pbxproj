@@ -42,6 +42,8 @@
 		E7752E4522ED16A500D98E98 /* Data+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752E0222ED05A000D98E98 /* Data+Core.swift */; };
 		E7752E4622ED16A500D98E98 /* NSOrderedSet+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752E0422ED064900D98E98 /* NSOrderedSet+Core.swift */; };
 		E7752E4722ED16A500D98E98 /* PrimitiveSequence+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752E0622ED06BB00D98E98 /* PrimitiveSequence+Core.swift */; };
+		E795A72723D7A905003F68B5 /* Lazy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795A72623D7A905003F68B5 /* Lazy.swift */; };
+		E795A72923D7A963003F68B5 /* Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = E795A72823D7A963003F68B5 /* Once.swift */; };
 		E7A5B41922F2385C005E620F /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A5B41822F2385C005E620F /* ArrayExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		E7752E2522ED10EE00D98E98 /* URLComponents+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLComponents+Core.swift"; sourceTree = "<group>"; };
 		E7752E3022ED114500D98E98 /* StringError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringError.swift; sourceTree = "<group>"; };
 		E7752E3222ED116E00D98E98 /* BigInt+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BigInt+Core.swift"; sourceTree = "<group>"; };
+		E795A72623D7A905003F68B5 /* Lazy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lazy.swift; sourceTree = "<group>"; };
+		E795A72823D7A963003F68B5 /* Once.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Once.swift; sourceTree = "<group>"; };
 		E7A5B41822F2385C005E620F /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,6 +235,8 @@
 				E7752DF622ED04B400D98E98 /* BoundedCache.swift */,
 				E7752DF722ED04B400D98E98 /* BoundedSet.swift */,
 				E7752DF822ED04B400D98E98 /* ConcurrentCache.swift */,
+				E795A72623D7A905003F68B5 /* Lazy.swift */,
+				E795A72823D7A963003F68B5 /* Once.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 			files = (
 				E7752E3A22ED16A500D98E98 /* URLComponents+Core.swift in Sources */,
 				E7752E3722ED16A500D98E98 /* BigInt+Core.swift in Sources */,
+				E795A72923D7A963003F68B5 /* Once.swift in Sources */,
 				E7752E3C22ED16A500D98E98 /* NSDecimalNumber+Core.swift in Sources */,
 				E7752DFB22ED04B400D98E98 /* ConcurrentCache.swift in Sources */,
 				E7752E4022ED16A500D98E98 /* Date+Core.swift in Sources */,
@@ -464,6 +471,7 @@
 				E7752E4122ED16A500D98E98 /* Array+Core.swift in Sources */,
 				E7752DF922ED04B400D98E98 /* BoundedCache.swift in Sources */,
 				E7752E3D22ED16A500D98E98 /* FileManager+Core.swift in Sources */,
+				E795A72723D7A905003F68B5 /* Lazy.swift in Sources */,
 				E7752E0A22ED077300D98E98 /* AtomicInt32.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
