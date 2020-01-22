@@ -21,6 +21,9 @@ extension String {
     /// Represents a period
     public static let period = "."
 
+    /// Represents a forward slash
+    public static let forwardSlash = "/"
+
     /// Convert string to BigInt if possible
     public var asBigInt: BigInt? {
         return BigInt.fromScientificNotation(string: self)
