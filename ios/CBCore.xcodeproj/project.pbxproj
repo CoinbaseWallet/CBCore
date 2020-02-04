@@ -14,6 +14,7 @@
 		E76C14CB22EF6F2800E46589 /* BoundedSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */; };
 		E76C14CC22EF6F2800E46589 /* AtomicInt32Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */; };
 		E76C14CE22EF8F0400E46589 /* BigIntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14CD22EF8F0400E46589 /* BigIntExtensionTests.swift */; };
+		E7746D8B23E8A72200F18666 /* BidirectionalCollection+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7746D8A23E8A72200F18666 /* BidirectionalCollection+Core.swift */; };
 		E7752DE322ED015800D98E98 /* CBCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7752DD922ED015700D98E98 /* CBCore.framework */; };
 		E7752DEA22ED015800D98E98 /* CBCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E7752DDC22ED015700D98E98 /* CBCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7752DF922ED04B400D98E98 /* BoundedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752DF622ED04B400D98E98 /* BoundedCache.swift */; };
@@ -33,7 +34,6 @@
 		E7752E3C22ED16A500D98E98 /* NSDecimalNumber+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752E2022ED0E7A00D98E98 /* NSDecimalNumber+Core.swift */; };
 		E7752E3D22ED16A500D98E98 /* FileManager+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752E1E22ED0E6F00D98E98 /* FileManager+Core.swift */; };
 		E7752E3E22ED16A500D98E98 /* Dictionary+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752E1C22ED0E4200D98E98 /* Dictionary+Core.swift */; };
-		E7752E3F22ED16A500D98E98 /* Collection+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752E1822ED0E0900D98E98 /* Collection+Core.swift */; };
 		E7752E4022ED16A500D98E98 /* Date+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752E1A22ED0E3400D98E98 /* Date+Core.swift */; };
 		E7752E4122ED16A500D98E98 /* Array+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752E1222ED0D9B00D98E98 /* Array+Core.swift */; };
 		E7752E4222ED16A500D98E98 /* DispatchQueue+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7752DFC22ED04EC00D98E98 /* DispatchQueue+Core.swift */; };
@@ -71,6 +71,7 @@
 		E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundedSetTests.swift; sourceTree = "<group>"; };
 		E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicInt32Tests.swift; sourceTree = "<group>"; };
 		E76C14CD22EF8F0400E46589 /* BigIntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigIntExtensionTests.swift; sourceTree = "<group>"; };
+		E7746D8A23E8A72200F18666 /* BidirectionalCollection+Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BidirectionalCollection+Core.swift"; sourceTree = "<group>"; };
 		E7752DD922ED015700D98E98 /* CBCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7752DDC22ED015700D98E98 /* CBCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCore.h; sourceTree = "<group>"; };
 		E7752DDD22ED015700D98E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		E7752E1222ED0D9B00D98E98 /* Array+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Core.swift"; sourceTree = "<group>"; };
 		E7752E1422ED0DB300D98E98 /* JSONSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializable.swift; sourceTree = "<group>"; };
 		E7752E1522ED0DB300D98E98 /* JSONDeserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDeserializable.swift; sourceTree = "<group>"; };
-		E7752E1822ED0E0900D98E98 /* Collection+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Core.swift"; sourceTree = "<group>"; };
 		E7752E1A22ED0E3400D98E98 /* Date+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Core.swift"; sourceTree = "<group>"; };
 		E7752E1C22ED0E4200D98E98 /* Dictionary+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Core.swift"; sourceTree = "<group>"; };
 		E7752E1E22ED0E6F00D98E98 /* FileManager+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+Core.swift"; sourceTree = "<group>"; };
@@ -216,7 +216,6 @@
 				E7752E2022ED0E7A00D98E98 /* NSDecimalNumber+Core.swift */,
 				E7752E1E22ED0E6F00D98E98 /* FileManager+Core.swift */,
 				E7752E1C22ED0E4200D98E98 /* Dictionary+Core.swift */,
-				E7752E1822ED0E0900D98E98 /* Collection+Core.swift */,
 				E7752E1A22ED0E3400D98E98 /* Date+Core.swift */,
 				E7752E1222ED0D9B00D98E98 /* Array+Core.swift */,
 				E7752DFC22ED04EC00D98E98 /* DispatchQueue+Core.swift */,
@@ -225,6 +224,7 @@
 				E7752E0222ED05A000D98E98 /* Data+Core.swift */,
 				E7752E0422ED064900D98E98 /* NSOrderedSet+Core.swift */,
 				E7752E0622ED06BB00D98E98 /* PrimitiveSequence+Core.swift */,
+				E7746D8A23E8A72200F18666 /* BidirectionalCollection+Core.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -451,7 +451,6 @@
 				E7752E3C22ED16A500D98E98 /* NSDecimalNumber+Core.swift in Sources */,
 				E7752DFB22ED04B400D98E98 /* ConcurrentCache.swift in Sources */,
 				E7752E4022ED16A500D98E98 /* Date+Core.swift in Sources */,
-				E7752E3F22ED16A500D98E98 /* Collection+Core.swift in Sources */,
 				E7752E3E22ED16A500D98E98 /* Dictionary+Core.swift in Sources */,
 				E7752E3922ED16A500D98E98 /* URL+Core.swift in Sources */,
 				E7752E1122ED0D8400D98E98 /* Refreshable.swift in Sources */,
@@ -467,6 +466,7 @@
 				E7752E1722ED0DB300D98E98 /* JSONDeserializable.swift in Sources */,
 				E7752E4522ED16A500D98E98 /* Data+Core.swift in Sources */,
 				E7752E4722ED16A500D98E98 /* PrimitiveSequence+Core.swift in Sources */,
+				E7746D8B23E8A72200F18666 /* BidirectionalCollection+Core.swift in Sources */,
 				E7752E4322ED16A500D98E98 /* Observable+Core.swift in Sources */,
 				E7752E4122ED16A500D98E98 /* Array+Core.swift in Sources */,
 				E7752DF922ED04B400D98E98 /* BoundedCache.swift in Sources */,

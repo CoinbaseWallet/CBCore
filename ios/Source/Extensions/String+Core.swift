@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2019 Coinbase Inc. See LICENSE
+// Copyright (c) 2017-2020 Coinbase Inc. See LICENSE
 
 import BigInt
 import os.log
@@ -23,6 +23,9 @@ extension String {
 
     /// Represents a forward slash
     public static let forwardSlash = "/"
+
+    /// Represents an @ sign
+    public static let atSign = "@"
 
     /// Convert string to BigInt if possible
     public var asBigInt: BigInt? {
