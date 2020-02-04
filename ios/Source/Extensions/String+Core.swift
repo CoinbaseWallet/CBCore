@@ -25,7 +25,7 @@ extension String {
     public static let forwardSlash = "/"
 
     /// Represents an @ sign
-    public static let atSign = "@"
+    public static let at = "@"
 
     /// Convert string to BigInt if possible
     public var asBigInt: BigInt? {

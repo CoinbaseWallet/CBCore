@@ -10,6 +10,7 @@
 		24F0E407D1522F556727305B /* Pods_CBCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48766EC05FAB2D444FDAA4A7 /* Pods_CBCore.framework */; };
 		D2DA735369E5DC60CA95D750 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D7763E25565E58F813DD4A /* Pods_Tests.framework */; };
 		D3685C6D2363753A00E05516 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3685C6C2363753A00E05516 /* StringExtensionTests.swift */; };
+		E745727123EA010900DF8FA2 /* BidirectionalCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745727023EA010900DF8FA2 /* BidirectionalCollectionTests.swift */; };
 		E76C14CA22EF6F2800E46589 /* BoundedCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C722EF6F2800E46589 /* BoundedCacheTests.swift */; };
 		E76C14CB22EF6F2800E46589 /* BoundedSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */; };
 		E76C14CC22EF6F2800E46589 /* AtomicInt32Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */; };
@@ -67,6 +68,7 @@
 		C2D1E42FE3E279C9FFA4A53C /* Pods-CBCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBCore.debug.xcconfig"; path = "Target Support Files/Pods-CBCore/Pods-CBCore.debug.xcconfig"; sourceTree = "<group>"; };
 		D3685C6C2363753A00E05516 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		E5176A96504EBB3B4AA9CD75 /* Pods-CBCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-CBCoreTests/Pods-CBCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E745727023EA010900DF8FA2 /* BidirectionalCollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidirectionalCollectionTests.swift; sourceTree = "<group>"; };
 		E76C14C722EF6F2800E46589 /* BoundedCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundedCacheTests.swift; sourceTree = "<group>"; };
 		E76C14C822EF6F2800E46589 /* BoundedSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundedSetTests.swift; sourceTree = "<group>"; };
 		E76C14C922EF6F2800E46589 /* AtomicInt32Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicInt32Tests.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				E7752DE922ED015800D98E98 /* Info.plist */,
 				E7A5B41822F2385C005E620F /* ArrayExtension.swift */,
 				D3685C6C2363753A00E05516 /* StringExtensionTests.swift */,
+				E745727023EA010900DF8FA2 /* BidirectionalCollectionTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			files = (
 				E7A5B41922F2385C005E620F /* ArrayExtension.swift in Sources */,
 				E76C14CA22EF6F2800E46589 /* BoundedCacheTests.swift in Sources */,
+				E745727123EA010900DF8FA2 /* BidirectionalCollectionTests.swift in Sources */,
 				D3685C6D2363753A00E05516 /* StringExtensionTests.swift in Sources */,
 				E76C14CC22EF6F2800E46589 /* AtomicInt32Tests.swift in Sources */,
 				E76C14CE22EF8F0400E46589 /* BigIntExtensionTests.swift in Sources */,
