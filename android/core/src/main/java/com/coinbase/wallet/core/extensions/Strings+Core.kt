@@ -26,3 +26,8 @@ val Strings.space by lazy { " " }
  * Represents a period
  */
 val Strings.period by lazy { "." }
+
+/**
+ * Represents an at sign
+ */
+val Strings.at by lazy { "@" }
