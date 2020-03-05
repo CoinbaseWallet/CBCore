@@ -8,7 +8,6 @@ class BoundedCache<T, R>(private val maxSize: Int) {
      */
     fun count(): Int = map.count()
 
-
     /**
      * Add the item to the map
      *
