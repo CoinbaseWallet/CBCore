@@ -96,10 +96,10 @@ extension String {
         for i in 0 ..< length {
             let hexLeft = str[str.index(str.startIndex, offsetBy: i * 2)]
             let hexRight = str[str.index(str.startIndex, offsetBy: i * 2 + 1)]
-            guard let idxLeft = hexadecimalCharacters.index(of: hexLeft) else {
+            guard let idxLeft = hexadecimalCharacters.firstIndex(of: hexLeft) else {
                 return nil
             }
-            guard let idxRight = hexadecimalCharacters.index(of: hexRight) else {
+            guard let idxRight = hexadecimalCharacters.firstIndex(of: hexRight) else {
                 return nil
             }
             let valLeft = hexadecimalCharacters.distance(from: hexadecimalCharacters.startIndex, to: idxLeft)
