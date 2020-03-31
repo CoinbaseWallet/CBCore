@@ -1,6 +1,5 @@
 package com.coinbase.wallet.core.util
 
-
 import io.reactivex.Flowable
 import io.reactivex.FlowableTransformer
 import io.reactivex.Observable

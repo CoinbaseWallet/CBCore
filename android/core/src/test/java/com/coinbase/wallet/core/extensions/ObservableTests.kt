@@ -1,7 +1,6 @@
 package com.coinbase.wallet.core.extensions
 
 import io.reactivex.Observable
-import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.subjects.PublishSubject
 import org.junit.Assert
