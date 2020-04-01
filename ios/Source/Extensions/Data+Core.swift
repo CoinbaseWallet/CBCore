@@ -36,31 +36,37 @@ extension Data {
         return Data(randomBytes)
     }
 
-    /// Convert to prefixed hex string
-    public func toPrefixedHexString() -> String {
+    /// Convert to hex encoded string
+    public func hexEncodedString(addPrefix: Bool = false) -> String {
+        let emptyResult = addPrefix ? "0x" : ""
+
         if isEmpty {
-            return "0x"
+            return emptyResult
         }
 
-        let startIndex = 2
-        let outputLength = count * 2 + startIndex + 1
+        let startIndex = addPrefix ? 2 : 0
+        let length = count * 2 + startIndex
+        var bytes = [UInt8](repeating: 0, count: length)
 
-        return withUnsafeBytes { (ptr: UnsafePointer<UInt8>) -> String in
-            let bytes = UnsafeBufferPointer<UInt8>(start: ptr, count: self.count)
-            var output = [UInt8](repeating: 0, count: outputLength)
-            output[0] = 48 // 0
-            output[1] = 120 // x
-
-            var i = startIndex
-            for b in bytes {
-                let left = Int(b / 16)
-                let right = Int(b % 16)
-                output[i] = hexadecimalArray[left]
-                output[i + 1] = hexadecimalArray[right]
-                i += 2
-            }
-            return String(cString: UnsafePointer(output))
+        if addPrefix {
+            bytes[0] = 48 // 0
+            bytes[1] = 120 // x
         }
+
+        var i = startIndex
+        for value in self {
+            let left = hexadecimalArray[Int(value / 16)]
+            let right = hexadecimalArray[Int(value % 16)]
+            bytes[i] = left
+            bytes[i + 1] = right
+            i += 2
+        }
+
+        guard let result = String(bytes: bytes, encoding: .utf8) else {
+            return emptyResult
+        }
+
+        return result
     }
 
     /// Get a subset data from the current data using the given range
