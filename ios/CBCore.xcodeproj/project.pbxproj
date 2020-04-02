@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24F0E407D1522F556727305B /* Pods_CBCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48766EC05FAB2D444FDAA4A7 /* Pods_CBCore.framework */; };
+		AB5D23B0243555B4005C6477 /* DataExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5D23AF243555B4005C6477 /* DataExtensionTests.swift */; };
 		D2DA735369E5DC60CA95D750 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D7763E25565E58F813DD4A /* Pods_Tests.framework */; };
 		D3685C6D2363753A00E05516 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3685C6C2363753A00E05516 /* StringExtensionTests.swift */; };
 		E745727123EA010900DF8FA2 /* BidirectionalCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745727023EA010900DF8FA2 /* BidirectionalCollectionTests.swift */; };
@@ -65,6 +66,7 @@
 		5C49629E5827F04530A7F197 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9BA62533429E43A054DA90E2 /* Pods-CBCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBCoreTests.release.xcconfig"; path = "Target Support Files/Pods-CBCoreTests/Pods-CBCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6D7763E25565E58F813DD4A /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5D23AF243555B4005C6477 /* DataExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionTests.swift; sourceTree = "<group>"; };
 		C2D1E42FE3E279C9FFA4A53C /* Pods-CBCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBCore.debug.xcconfig"; path = "Target Support Files/Pods-CBCore/Pods-CBCore.debug.xcconfig"; sourceTree = "<group>"; };
 		D3685C6C2363753A00E05516 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		E5176A96504EBB3B4AA9CD75 /* Pods-CBCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CBCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-CBCoreTests/Pods-CBCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				E7A5B41822F2385C005E620F /* ArrayExtension.swift */,
 				D3685C6C2363753A00E05516 /* StringExtensionTests.swift */,
 				E745727023EA010900DF8FA2 /* BidirectionalCollectionTests.swift */,
+				AB5D23AF243555B4005C6477 /* DataExtensionTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -337,10 +340,11 @@
 				TargetAttributes = {
 					E7752DD822ED015700D98E98 = {
 						CreatedOnToolsVersion = 10.3;
-						LastSwiftMigration = 1030;
+						LastSwiftMigration = 1140;
 					};
 					E7752DE122ED015800D98E98 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -488,6 +492,7 @@
 				E745727123EA010900DF8FA2 /* BidirectionalCollectionTests.swift in Sources */,
 				D3685C6D2363753A00E05516 /* StringExtensionTests.swift in Sources */,
 				E76C14CC22EF6F2800E46589 /* AtomicInt32Tests.swift in Sources */,
+				AB5D23B0243555B4005C6477 /* DataExtensionTests.swift in Sources */,
 				E76C14CE22EF8F0400E46589 /* BigIntExtensionTests.swift in Sources */,
 				E76C14CB22EF6F2800E46589 /* BoundedSetTests.swift in Sources */,
 			);
@@ -649,7 +654,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -676,7 +681,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.coinbase.wallet.core.CBCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -697,7 +702,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.coinbase.wallet.core.CBCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -718,7 +723,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.coinbase.wallet.core.CBCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

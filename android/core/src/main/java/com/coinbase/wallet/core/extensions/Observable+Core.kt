@@ -1,6 +1,7 @@
 package com.coinbase.wallet.core.extensions
 
 import com.coinbase.wallet.core.util.Optional
+import com.coinbase.wallet.core.util.ReplayingShare
 import io.reactivex.Observable
 import io.reactivex.Single
 
@@ -56,4 +57,20 @@ fun <T> Observable<T>.retryIfNeeded(maxAttempts: Int, shouldRetry: (Throwable) -
  */
 fun <T> Observable<T>.asUnit(): Observable<Unit> {
     return this.map { Unit }
+}
+
+/**
+ * A transformer which combines `replay(1)`, `publish()`, and `refCount()` operators.
+ *
+ * Unlike traditional combinations of these operators, `ReplayingShare` caches the last emitted
+ * value from the upstream observable *only* when one or more downstream observers are connected.
+ * This allows expensive upstream observables to be shut down when no one is observing while also
+ * replaying the last value seen by *any* observer to new ones.
+ *
+ * @param defaultValue the initial value delivered to new subscribers before any events are cached.
+ * A null value means there will be no initial emission.
+ */
+@JvmOverloads
+fun <T> Observable<T>.replayingShare(defaultValue: T? = null): Observable<T> {
+    return compose(ReplayingShare.create(defaultValue))
 }
