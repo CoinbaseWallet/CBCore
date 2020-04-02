@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.source_files = 'ios/Source/**/*.swift'
 
-  s.dependency 'RxSwift', '~> 4.4.0'
-  s.dependency 'BigInt',  '~> 3.1.0'
+  s.dependency 'RxSwift', '> 4.4.0'
+  s.dependency 'BigInt',  '> 3.1.0'
 end
